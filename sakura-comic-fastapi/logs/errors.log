@@ -1,0 +1,22 @@
+2025-12-05 15:08:13,795 - app.routes.sql_agent - ERROR - sql_agent.py:474 - SQL execution error: (pymysql.err.OperationalError) (1054, "Unknown column 'm.vod_year' in 'field list'")
+[SQL: SELECT m.id, m.vod_name, m.vod_play_from, m.vod_year, m.vod_director, m.vod_actor, m.vod_area, m.vod_content, m.vod_score, m.vod_pic, m.vod_play_url, m.vod_hits, m.vod_time FROM sakura_movinfo m JOIN sakura_movtype t ON m.type_id = t.type_id WHERE t.type_name LIKE '%%动漫%%' LIMIT 10;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-05 15:08:32,691 - app.routes.sql_agent - ERROR - sql_agent.py:474 - SQL execution error: (pymysql.err.OperationalError) (1054, "Unknown column 'm.vod_year' in 'field list'")
+[SQL: SELECT m.id, m.vod_name, m.vod_play_from, m.vod_year, m.vod_director, m.vod_actor, m.vod_area, m.vod_content, m.vod_score, m.vod_pic, m.vod_play_url, m.vod_hits, m.vod_time FROM sakura_movinfo m JOIN sakura_movtype t ON m.type_id = t.type_id WHERE t.type_name LIKE '%%动漫%%' LIMIT 10;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-05 15:15:44,844 - app.routes.sql_agent - ERROR - sql_agent.py:400 - LLM API timeout
+2025-12-05 15:16:41,654 - app.routes.sql_agent - ERROR - sql_agent.py:475 - SQL execution error: (pymysql.err.OperationalError) (1054, "Unknown column 'vod_area' in 'field list'")
+[SQL: SELECT vod_id, vod_name, type_name, vod_area, vod_year, vod_score, vod_pic, vod_play_url, vod_hits FROM sakura_movinfo WHERE type_name LIKE '%%国产%%' AND vod_name LIKE '%%动漫%%' LIMIT 10;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-05 15:17:02,831 - app.routes.sql_agent - ERROR - sql_agent.py:400 - LLM API timeout
+2025-12-27 18:47:49,219 - app.routes.movie_recommendation - ERROR - movie_recommendation.py:336 - Query execution error: (sqlite3.OperationalError) unrecognized token: ":"
+[SQL: SELECT vod_id, vod_name, vod_score, vod_year, vod_class, vod_area, vod_actor, vod_director, vod_pic, vod_content FROM sakura_movdetail WHERE vod_class LIKE '%科幻%' AND vod_area LIKE '%欧美%' AND (vod_content LIKE '%特效%' OR vod_content LIKE '%特效好%') AND vod_score::float > 7.0 AND vod_year >= '2020' ORDER BY vod_score DESC, vod_hits DESC LIMIT 12]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-27 18:47:49,223 - app.routes.movie_recommendation - ERROR - movie_recommendation.py:447 - Recommendation error: (sqlite3.OperationalError) unrecognized token: ":"
+[SQL: SELECT vod_id, vod_name, vod_score, vod_year, vod_class, vod_area, vod_actor, vod_director, vod_pic, vod_content FROM sakura_movdetail WHERE vod_class LIKE '%科幻%' AND vod_area LIKE '%欧美%' AND (vod_content LIKE '%特效%' OR vod_content LIKE '%特效好%') AND vod_score::float > 7.0 AND vod_year >= '2020' ORDER BY vod_score DESC, vod_hits DESC LIMIT 12]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-28 21:58:05,217 - app.routes.movie_qa - ERROR - movie_qa.py:151 - 网络搜索失败: 
+2025-12-28 21:58:28,651 - app.routes.movie_qa - ERROR - movie_qa.py:151 - 网络搜索失败: 
+2025-12-28 22:00:14,332 - app.routes.movie_qa - ERROR - movie_qa.py:151 - 网络搜索失败: 
+2025-12-28 22:42:54,355 - app.routes.movie_qa - ERROR - movie_qa.py:151 - 网络搜索失败: 
+2025-12-28 22:43:24,090 - app.routes.movie_qa - ERROR - movie_qa.py:151 - 网络搜索失败: 
